@@ -11,6 +11,10 @@ function draw() {
     strokeWeight(2);
     point(x,y);
 
-    var r = random(0,4);
-    
+    var r = floor(random(-4,4));
+
+
+    x += floor(random(-4,4));
+    y += floor(random(-4,4));
+
 }
