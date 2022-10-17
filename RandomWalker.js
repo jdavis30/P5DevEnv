@@ -1,20 +1,34 @@
-var x = 200;
-var y = 200;
+var x;
+var y;
 
 function setup() {
     createCanvas(400,400);
+    x = 200;
+    y = 200;
+    background(51);
 }
 
 function draw() {
-    background(51);
+    
     stroke(255);
     strokeWeight(2);
     point(x,y);
 
-    var r = floor(random(-4,4));
+    var direction = floor(random(0,4));
+    var stepLength = 1;
 
-
-    x += floor(random(-4,4));
-    y += floor(random(-4,4));
-
+    switch (direction) {
+        case 0:
+            x += stepLength;
+            break;
+        case 1:
+            x -= stepLength;
+            break;
+        case 2:
+            y += stepLength;
+            break;
+        case 3:
+            y -= stepLength;
+            break;
+    }
 }
